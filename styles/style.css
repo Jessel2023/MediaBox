@@ -1,0 +1,284 @@
+.box {
+    border: 2px solid #000;
+    margin: 5px;
+    padding: 20px;
+    font-family: Arial;
+    color: rgb(212, 136, 136);
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+}
+
+.container header, main {
+    display: flex;
+}
+
+/** Header **/
+
+.container header .box {
+    height: 80px;
+    /* margin-left: 5px; */
+}
+
+.container header .box.box1 {
+    flex-grow: 5;
+    background-color: rgb(133, 206, 188);
+}
+
+.container header .box.box2 {
+    flex-grow: 1;
+    background-color: rgb(133, 206, 188);
+}
+
+/** main **/
+.container main {
+    flex-direction: row;
+    height: 78vh;
+}
+
+.container main .sideBar, .content {
+    display: flex;
+    
+}
+
+.container main .sideBar {
+    flex-direction: column;
+    flex-grow: 1;
+ 
+}
+
+.container main .sideBar .box{
+    width: 300px;
+
+}
+
+.container main .sideBar .box.box1 {
+    height: 30%;
+    background-color: rgb(133, 206, 188);
+}
+
+.container main .sideBar .box.box2 {
+    height: 70%;
+    flex-grow: 5;
+    background-color: rgb(133, 206, 188);
+}
+
+/** Main **/
+.container main .content {
+    flex-direction: row;   
+    flex-grow: 5;
+    width: 100%;
+
+}
+
+.container main .content .box.box1 {
+    flex-grow: 4;
+    background-color: rgb(133, 206, 188);
+}
+
+.container main .content .box.box2 {
+    flex-grow: 1;
+    background-color: rgb(133, 206, 188);
+}
+
+
+
+footer {
+    background-color: rgb(242, 250, 248);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container header{
+        flex-direction: column;
+    }
+    .container main .sideBar:nth-child(1) {
+        display: none;
+        
+    }
+    .container header .box.box1 {
+        flex-grow: 5;
+        background-color: rgb(19, 100, 146);
+    }
+    
+    .container header .box.box2 {
+        flex-grow: 1;
+        background-color: rgb(19, 100, 146);
+    }
+    .container main .content .box.box1 {
+        flex-grow: 2;
+        background-color: rgb(19, 100, 146);
+    }
+    
+    .container main .content .box.box2 {
+        flex-grow: 1;
+        background-color: rgb(19, 100, 146);
+    }
+    footer {
+        background-color: rgb(19, 100, 146);
+    }
+    
+    .container  main {
+ 
+        flex-direction: column;
+
+       }
+       .container main .content {
+ 
+        flex-direction: column;
+       }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .container main .sideBar:nth-child(1) {
+        display: none;
+        
+    }
+   
+   footer {
+    background-color: rgb(9, 105, 81);
+}
+.container main .sideBar .box.box1 {
+    height: 30%;
+    background-color: rgb(217, 167, 236);
+}
+
+.container main .sideBar .box.box2 {
+    height: 70%;
+    flex-grow: 5;
+    background-color: rgb(217, 167, 236);
+}
+.container header .box.box1 {
+    flex-grow: 5;
+    background-color: rgb(217, 167, 236);
+}
+
+.container header .box.box2 {
+    flex-grow: 1;
+    background-color: rgb(217, 167, 236);
+}
+.container main .content .box.box1 {
+    flex-grow: 4;
+    background-color: rgb(217, 167, 236);
+}
+
+.container main .content .box.box2 {
+    flex-grow: 1;
+    background-color: rgb(217, 167, 236);
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .container main .sideBar:nth-child(1) {
+        display: flex;
+        
+    }
+    
+    .container main .sideBar .box.box1 {
+        height: 30%;
+        background-color: rgb(183, 218, 247);
+    }
+    
+    .container main .sideBar .box.box2 {
+        height: 70%;
+        flex-grow: 5;
+        background-color: rgb(183, 218, 247);
+    }
+    .container header .box.box1 {
+        flex-grow: 5;
+        background-color: rgb(183, 218, 247);
+    }
+    
+    .container header .box.box2 {
+        flex-grow: 1;
+        background-color: rgb(183, 218, 247);
+    }
+    .container main .content .box.box1 {
+        flex-grow: 4;
+        background-color: rgb(183, 218, 247);
+    }
+    
+    .container main .content .box.box2 {
+        flex-grow: 1;
+        background-color: rgb(183, 218, 247);
+    }
+    footer{
+        background-color: rgb(183, 218, 247);
+    }
+    
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .container main .sideBar .box.box1 {
+        height: 30%;
+        background-color: rgb(63, 111, 151);
+    }
+    .container main .sideBar .box.box2 {
+        height: 70%;
+        flex-grow: 5;
+        background-color: rgb(63, 111, 151);
+    }
+    .container header .box.box1 {
+        flex-grow: 5;
+        background-color: rgb(63, 111, 151);
+    }
+    
+    .container header .box.box2 {
+        flex-grow: 1;
+        background-color: rgb(63, 111, 151);
+    }
+    .container main .content .box.box1 {
+        flex-grow: 4;
+        background-color: rgb(63, 111, 151);
+    }
+    
+    .container main .content .box.box2 {
+        flex-grow: 1;
+        background-color: rgb(63, 111, 151);
+    }
+    footer{
+        background-color: rgb(63, 111, 151);
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .container main .sideBar .box.box1 {
+        height: 30%;
+        background-color: rgb(184, 204, 219);
+    }
+    .container main .sideBar .box.box2 {
+        height: 70%;
+        flex-grow: 5;
+        background-color: rgb(184, 204, 219);
+    }
+    .container header .box.box1 {
+        flex-grow: 5;
+        background-color: rgb(184, 204, 219);
+    }
+    
+    .container header .box.box2 {
+        flex-grow: 1;
+        background-color: rgb(184, 204, 219);
+    }
+    .container main .content .box.box1 {
+        flex-grow: 4;
+        background-color: rgb(184, 204, 219);
+    }
+    
+    .container main .content .box.box2 {
+        flex-grow: 1;
+        background-color: rgb(184, 204, 219);
+    }
+    footer{
+        background-color: rgb(184, 204, 219);
+    }
+}
+}
